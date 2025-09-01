@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+  <style>
+    label { display: block; margin-top: 10px; }
+    fieldset { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h1>Job Application Form</h1>
+  <form action="formtest.php" method="post">
+    
+    <label for="jobRef">Job Reference Number:</label>
+    <input type="text" id="jobRef" name="jobRef" pattern="[A-Za-z0-9]{5}" required>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]{1,20}" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]{1,20}" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" required>
+
+    <fieldset>
+      <legend>Gender:</legend>
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+      <label><input type="radio" name="gender" value="Other"> Other</label>
+    </fieldset>
+
+    <label for="address">Street Address:</label>
+    <input type="text" id="address" name="address" maxlength="40" required>
+
+    <label for="suburb">Suburb/Town:</label>
+    <input type="text" id="suburb" name="suburb" maxlength="40" required>
+
+    <label for="state">State:</label>
+    <select id="state" name="state" required>
+      <option value="">Select</option>
+      <option value="VIC">VIC</option>
+      <option value="NSW">NSW</option>
+      <option value="QLD">QLD</option>
+      <option value="NT">NT</option>
+      <option value="WA">WA</option>
+      <option value="SA">SA</option>
+      <option value="TAS">TAS</option>
+      <option value="ACT">ACT</option>
+    </select>
+
+    <label for="postcode">Postcode:</label>
+    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" pattern="\d{8,12}" required>
+
+    <fieldset>
+      <legend>Skills:</legend>
+      <label><input type="checkbox" name="skills[]" value="Communication" required> Communication</label>
+      <label><input type="checkbox" name="skills[]" value="Teamwork"> Teamwork</label>
+      <label><input type="checkbox" name="skills[]" value="Problem Solving"> Problem Solving</label>
+      <label><input type="checkbox" name="skills[]" value="Leadership"> Leadership</label>
+      <label>
+        <input type="checkbox" name="skills[]" value="Other"> Other skills…
+        <input type="text" name="otherSkillDetail" maxlength="20">
+    </label>
+    </fieldset>
+
+    <label for="otherSkills">Other Skills:</label>
+    <textarea id="otherSkills" name="otherSkills" rows="4" cols="50"></textarea>
+
+    <br><br>
+    <input type="submit" value="Submit Application">
+  </form>
+</body>
+</html>
