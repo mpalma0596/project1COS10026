@@ -1,0 +1,281 @@
+/*
+filename: styles.css
+author: Brahmjot Singh
+created: 2025-09-01
+last modified: 2025-09-01
+description: Global styles for GovTech Solutions (G06) – index, jobs, apply, about
+*/
+
+/* ===== Theme tokens ===== */
+:root{
+  --navy:#0B3D91;          /* brand primary */
+  --navy-deep:#082a63;
+  --accent:#1B998B;        /* teal accent */
+  --text:#1f2937;          /* dark grey body text */
+  --muted:#6b7280;
+  --bg:#f7fafc;            /* page background */
+  --card:#ffffff;          /* surface */
+  --border:#d1d5db;
+  --focus:#ffbf47;         /* high-vis focus ring */
+  --link:#0B3D91;
+  --link-hover:#072657;
+  --black:#000000;
+}
+
+/* ===== Base & reset-lite ===== */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height:1.6;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-text-size-adjust:100%;
+  border-left: 8px solid var(--black);
+  border-right: 8px solid var(--black);
+}
+img{max-width:100%;height:auto;display:block}
+
+/* Make anchors accessible */
+a{color:var(--link)}
+a:hover{color:var(--link-hover)}
+a:focus{outline:3px solid var(--focus); outline-offset:2px}
+
+/* Page wrapper for readable line lengths */
+main, header, nav, footer{max-width:98% ;margin:0 auto; padding:0 1rem}
+
+/* ===== HEADER (Background image) ===== */
+header{
+  /* Once we have chosen background image we can add here. Otherwise falls back to a gradient if not found. */
+  background:
+    linear-gradient(0deg, rgba(11,61,145,.05), rgba(11,61,145,.05));
+  border-bottom:4px solid var(--navy);
+  text-align:center;
+  padding:3rem 1rem 2rem;
+  position:relative;
+}
+/* Optional stronger background image for index:
+   put a file named background.jpg next to index.html or adjust the path. */
+header{
+  background-image: url("background.jpg"), linear-gradient(0deg, rgba(11,61,145,.05), rgba(11,61,145,.05));
+  background-size: cover, auto;
+  background-position: center;
+}
+header img{
+  margin:0 auto 1rem;
+  width:min(280px, 60%);
+  border-radius:.4rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  background:#fff;
+}
+header h1{
+  margin:.25rem 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  color:var(--navy);
+  letter-spacing:.5px;
+}
+header p{margin:.4rem auto; max-width:70ch}
+header em{color:var(--muted)}
+
+/* ===== NAV ===== */
+nav{padding:0 1rem 1.25rem}
+nav ul{
+  list-style:none; padding:0; margin:0;
+  display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center;
+}
+nav a{
+  text-decoration:none; color:#fff; background:var(--navy);
+  padding:.5rem .9rem; border-radius:.45rem; border:2px solid var(--navy);
+  display:inline-block;
+}
+nav a:hover{
+  background:var(--navy-deep);
+  border-color:var(--navy-deep);
+  color:#fff;
+}
+nav a:focus{outline:3px solid var(--focus); outline-offset:2px}
+
+/* ===== MAIN ===== */
+main{padding:1.25rem 0 2rem}
+main h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+  color:var(--navy);
+  margin-top:.5rem;
+}
+main p{max-width:75ch}
+main img{
+  margin:1rem 0; border:1px solid var(--border); border-radius:.5rem;
+  box-shadow:0 8px 18px rgba(0,0,0,.05);
+}
+
+/* A simple “card” look for content sections (re-usable across pages) */
+.card{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:.6rem; padding:1rem; margin:1rem 0;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  border-top:4px solid var(--navy);
+  padding:1rem 1rem 2rem;
+  text-align:center;
+  color:var(--muted);
+  background:#fff;
+}
+footer a{color:var(--navy); text-decoration:none; border-bottom:1px dotted var(--navy)}
+footer a:hover{border-bottom-color:transparent}
+
+/* ===== Responsive tweaks ===== */
+@media (min-width:800px){
+  header{padding:4rem 1rem 2.25rem}
+  header img{width:320px}
+}
+
+
+/* ===== jobs.html (G06 requirement: aside 25% floated right with border, margin, padding) ===== */
+body.jobs .layout{
+  overflow:auto; /* contain floats */
+  padding-top: .5rem;
+}
+
+/* Right column info panel */
+body.jobs aside{
+  width:25%;
+  float:right;
+  border:1px solid var(--border);
+  background:#fff;
+  padding:1rem;
+  margin:0 0 1rem 1rem; /* space from main column */
+  border-radius:.5rem;
+}
+
+/* Main job sections */
+body.jobs section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:.5rem;
+  padding:1rem;
+  margin:0 0 1rem 0;
+}
+
+/* Job headings and metadata */
+body.jobs section h2{
+  margin-top:0;
+  color:var(--navy);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+}
+body.jobs .meta{
+  color: var(--muted);
+  font-size:.95rem;
+  margin:.25rem 0 .75rem;
+}
+
+/* Lists inside job ads */
+body.jobs section ol,
+body.jobs section ul{
+  padding-left:1.25rem;
+}
+body.jobs section li{
+  margin:.25rem 0;
+}
+
+/* “Apply” callout links/buttons inside job sections (optional) */
+body.jobs .apply-link{
+  display:inline-block;
+  margin-top:.75rem;
+  background:var(--navy);
+  color:#fff;
+  text-decoration:none;
+  padding:.45rem .8rem;
+  border-radius:.4rem;
+  border:2px solid var(--navy);
+}
+body.jobs .apply-link:hover{
+  background:var(--navy-deep);
+  border-color:var(--navy-deep);
+  color:#fff;
+}
+
+/* Responsive: stack aside below content on small screens */
+@media (max-width: 719px){
+  body.jobs aside{
+    float:none;
+    width:auto;
+    margin:0 0 1rem 0;
+  }
+}
+
+
+
+
+/* ===== apply.html — form layout & styling (Grid/Flex, accessible focus) ===== */
+
+/* Page padding fix for apply.html so doesnt stick to border sides */
+body.apply{
+  padding-inline: clamp(24px, 5vw, 60px);
+}
+
+body.apply main{ padding-top: 1rem; }
+
+/* Grid layout for the form */
+body.apply .form-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1rem;
+}
+
+/* Make some rows span full width on larger screens */
+@media (min-width: 720px){
+  body.apply .form-grid{ grid-template-columns: 1fr 1fr; }
+  body.apply .form-grid .full{ grid-column: 1 / -1; }
+}
+
+/* Labels & controls */
+body.apply label{ display:block; font-weight:600; margin-bottom:.25rem; }
+body.apply input[type="text"],
+body.apply input[type="email"],
+body.apply input[type="tel"],
+body.apply select,
+body.apply textarea{
+  width:100%;
+  padding:.55rem .6rem;
+  border:1px solid var(--border);
+  border-radius:.35rem;
+  background:#fff;
+}
+
+/* Fieldsets */
+body.apply fieldset{
+  border:1px solid var(--border);
+  border-radius:.35rem;
+  padding: .8rem;
+}
+body.apply legend{ font-weight:700; }
+
+/* Hints under inputs */
+body.apply .hint{ font-size:.9rem; color:var(--muted); margin-top:.25rem; }
+
+/* Buttons */
+body.apply .actions{ display:flex; gap:.75rem; flex-wrap:wrap; }
+body.apply [type="submit"],
+body.apply [type="reset"],
+body.apply button{
+  border:0; border-radius:.4rem; padding:.6rem .95rem; cursor:pointer;
+}
+body.apply [type="submit"]{ background:var(--navy); color:#fff; border:2px solid var(--navy); }
+body.apply [type="submit"]:hover{ background:var(--navy-deep); border-color:var(--navy-deep); color:#fff; }
+body.apply [type="reset"]{ background:#e5e7eb; }
+body.apply [type="reset"]:hover{ background:#d1d5db; }
+
+/* Focus states (use global outline colour) */
+body.apply input:focus,
+body.apply select:focus,
+body.apply textarea:focus{ outline:3px solid var(--focus); outline-offset:1px; }
+
+/* Invalid quick visual (browser validation) */
+body.apply input:invalid,
+body.apply select:invalid,
+body.apply textarea:invalid{ border-color:#dc2626; }
