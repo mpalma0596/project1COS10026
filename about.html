@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team Profile</title>
+  <!-- Link your external stylesheet here -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta name="description" content="Template for a team profile page with group info, member contributions, quotes, photo, and fun facts." />
+</head>
+<body>
+  <header>
+    <h1 id="group-name">Group Name Here</h1>
+    <section aria-labelledby="class-info-heading">
+      <h2 id="class-info-heading">Class Day/Time</h2>
+      <!-- Nested list example: Course ➝ Day ➝ Time -->
+      <ul>
+        <li>
+          <span class="course">COS10026 Web Technologies</span>
+          <ul>
+            <li>
+              <span class="day">Wednesday</span>
+              <ul>
+                <li><time datetime="2025-09-05T14:30">2:30 PM - 4:30 PM</time></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Add more nested items if needed -->
+      </ul>
+    </section>
+  </header>
+
+  <main>
+    <!-- Group Photo (keep <300KB). Add width/height for layout stability. -->
+    <section aria-labelledby="group-photo-heading">
+      <h2 id="group-photo-heading">Group Photo</h2>
+      <figure>
+        <!-- Replace src with your optimized image (≤ 300 KB) -->
+        <img src="images/group-photo.jpg" alt="Group members standing in front of the lab" width="1200" height="800" />
+        <figcaption>Our team outside the computer lab (Semester 2, 2025).</figcaption>
+      </figure>
+    </section>
+
+    <!-- Member Contributions + Quotes as a Definition List -->
+    <section aria-labelledby="contributions-heading">
+      <h2 id="contributions-heading">Member Contributions & Quotes</h2>
+      <p class="hint">Use a definition list where each member name is a term (<code>&lt;dt&gt;</code>) and their details are definitions (<code>&lt;dd&gt;</code>).</p>
+
+      <dl>
+        <!-- Member 1 -->
+        <dt>Michael Palma</dt>
+        <dd>
+          <strong>Contributions:</strong> Requirements gathering, UI wireframes, front-end integration.
+        </dd>
+        <dd>
+          <strong>Quote:</strong> “Make it work, make it right, make it fast.”
+        </dd>
+        <dd>
+          <strong>First/Favourite Language:</strong> JavaScript
+          <br />
+          <em>Translation:</em> <span lang="zh">脚本语言</span> (<span lang="en">JavaScript</span>)
+        </dd>
+
+        <!-- Member 2 -->
+        <dt>Chee sum lo</dt>
+        <dd>
+          <strong>Contributions:</strong> API design, back-end services, testing pipeline.
+        </dd>
+        <dd>
+          <strong>Quote:</strong> “Tests are the safety net of creativity.”
+        </dd>
+        <dd>
+          <strong>First/Favourite Language:</strong> Python
+          <br />
+          <em>Translation:</em> <span lang="ar">بايثون</span> (<span lang="en">Python</span>)
+        </dd>
+
+        <!-- Member 3 -->
+        <dt>Brahmjot Singh</dt>
+        <dd>
+          <strong>Contributions:</strong> Database schema, data migration scripts, performance tuning.
+        </dd>
+        <dd>
+          <strong>Quote:</strong> “Data first, features second.”
+        </dd>
+        <dd>
+          <strong>First/Favourite Language:</strong> SQL
+          <br />
+          <em>Translation:</em> <span lang="it">Linguaggio di interrogazione strutturato</span> (<span lang="en">SQL</span>)
+        </dd>
+
+        <!-- Member 4 -->
+        <dt>Minh Tran</dt>
+        <dd>
+          <strong>Contributions:</strong> Database schema, data migration scripts, performance tuning.
+        </dd>
+        <dd>
+          <strong>Quote:</strong> “Data first, features second.”
+        </dd>
+        <dd>
+          <strong>First/Favourite Language:</strong> SQL
+          <br />
+          <em>Translation:</em> <span lang="it">Linguaggio di interrogazione strutturato</span> (<span lang="en">SQL</span>)
+        </dd>
+
+        <!-- Duplicate the block above for additional members -->
+      </dl>
+    </section>
+
+    <!-- Fun Facts Table with Caption -->
+    <section aria-labelledby="fun-facts-heading">
+      <h2 id="fun-facts-heading">Fun Facts</h2>
+      <table>
+        <caption>Team fun facts: dream jobs, preferred coding snacks, and hometowns.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Member</th>
+            <th scope="col">Dream Job</th>
+            <th scope="col">Coding Snack</th>
+            <th scope="col">Hometown</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Michael Palma</th>
+            <td>Product Designer</td>
+            <td>Trail mix</td>
+            <td>Melbourne, AU</td>
+          </tr>
+          <tr>
+            <th scope="row">Chee sum lo</th>
+            <td>ML Engineer</td>
+            <td>Dark chocolate</td>
+            <td>Sydney, AU</td>
+          </tr>
+          <tr>
+            <th scope="row">Brahmjot Singh</th>
+            <td>Data Architect</td>
+            <td>Espresso + biscotti</td>
+            <td>Rome, IT</td>
+          </tr>
+           <tr>
+            <th scope="row">Minh Tran</th>
+            <td>Data Architect</td>
+            <td>Espresso + biscotti</td>
+            <td>Rome, IT</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2025</span> Team Name. All rights reserved.</p>
+    <p>
+      <a href="#group-name">Back to top</a>
+    </p>
+  </footer>
+
+ 
