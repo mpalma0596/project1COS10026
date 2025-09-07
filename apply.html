@@ -7,19 +7,21 @@
     label { display: block; margin-top: 10px; }
     fieldset { margin-top: 15px; }
   </style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body class ="apply"`>
   <h1>Job Application Form</h1>
   <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
     
     <label for="jobRef">Job Reference Number:</label>
-    <input type="text" id="jobRef" name="jobRef" pattern="[A-Za-z0-9]{5}" required>
+    <input type="text" id="jobRef" name="jobRef" pattern="[A-Za-z0-9]{5}" required placeholder="Enter 5 Alphanumeric characters">
 
     <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]{1,20}" required>
+    <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]{1,20}" required placeholder="Enter your first name">
 
     <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]{1,20}" required>
+    <input type="text" id="lastName" name="lastName" pattern="[A-Za-z]{1,20}" required placeholder="Enter your last name">
 
     <label for="dob">Date of Birth:</label>
     <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" required>
