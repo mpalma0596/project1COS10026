@@ -5,35 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Team Profile</title>
   <!-- Link your external stylesheet here -->
-  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link rel="stylesheet" href="styles.css">
   <meta name="description" content="Template for a team profile page with group info, member contributions, quotes, photo, and fun facts." />
 </head>
-<body>
+<body class ="about">
   <header>
-    <h1 id="group-name">Group Name Here</h1>
-    <section aria-labelledby="class-info-heading">
-      <h2 id="class-info-heading">Class Day/Time</h2>
-      <!-- Nested list example: Course ➝ Day ➝ Time -->
-      <ul>
-        <li>
-          <span class="course">COS10026 Web Technologies</span>
-          <ul>
-            <li>
-              <span class="day">Wednesday</span>
-              <ul>
-                <li><time datetime="2025-09-05T14:30">2:30 PM - 4:30 PM</time></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- Add more nested items if needed -->
-      </ul>
-    </section>
+    <!-- inner wrapper controls content width and bottom navy rule -->
+    <div class="header-inner">
+      <h1 id="group-name">Group Name Here</h1>
+      <section aria-labelledby="class-info-heading">
+        <h2 id="class-info-heading">Friday 14.30 to 16.30</h2>
+        <dl>
+          <dd>COS100026 Web Technology Project</dd>
+          <dd>Wednesday</dd>
+          <dd>2:30 PM - 4:30 PM</dd>
+        </dl>
+      </section>
+    </div>
   </header>
 
   <main>
     <!-- Group Photo (keep <300KB). Add width/height for layout stability. -->
-    <section aria-labelledby="group-photo-heading">
+    <section aria-labelledby="group-photo-heading" class="card">
       <h2 id="group-photo-heading">Group Photo</h2>
       <figure>
         <!-- Replace src with your optimized image (≤ 300 KB) -->
@@ -43,7 +36,7 @@
     </section>
 
     <!-- Member Contributions + Quotes as a Definition List -->
-    <section aria-labelledby="contributions-heading">
+    <section aria-labelledby="contributions-heading" class="card">
       <h2 id="contributions-heading">Member Contributions & Quotes</h2>
       <p class="hint">Use a definition list where each member name is a term (<code>&lt;dt&gt;</code>) and their details are definitions (<code>&lt;dd&gt;</code>).</p>
 
@@ -63,7 +56,7 @@
         </dd>
 
         <!-- Member 2 -->
-        <dt>Chee sum lo</dt>
+        <dt>Chee Sum Loh</dt>
         <dd>
           <strong>Contributions:</strong> API design, back-end services, testing pipeline.
         </dd>
@@ -109,7 +102,7 @@
     </section>
 
     <!-- Fun Facts Table with Caption -->
-    <section aria-labelledby="fun-facts-heading">
+    <section aria-labelledby="fun-facts-heading" class="card">
       <h2 id="fun-facts-heading">Fun Facts</h2>
       <table>
         <caption>Team fun facts: dream jobs, preferred coding snacks, and hometowns.</caption>
@@ -129,7 +122,7 @@
             <td>Melbourne, AU</td>
           </tr>
           <tr>
-            <th scope="row">Chee sum lo</th>
+            <th scope="row">Chee Sum Loh</th>
             <td>ML Engineer</td>
             <td>Dark chocolate</td>
             <td>Sydney, AU</td>

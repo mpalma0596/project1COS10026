@@ -279,3 +279,82 @@ body.apply textarea:focus{ outline:3px solid var(--focus); outline-offset:1px; }
 body.apply input:invalid,
 body.apply select:invalid,
 body.apply textarea:invalid{ border-color:#dc2626; }
+
+
+
+
+
+/* ===== about.html - team member cards (flexbox) ===== */
+body.about .layout{
+  overflow:auto; /* contain floats */
+  padding-top: .5rem;
+}
+
+/* Right column info panel */
+body.about aside{
+  width:25%;
+  float:right;
+  border:1px solid var(--border);
+  background:#fff;
+  padding:1rem;
+  margin:0 0 1rem 1rem; /* space from main column */
+  border-radius:.5rem;
+}
+
+/* Table border used in the event the HTML <table> was overriden */
+body.about table{
+  border:1px solid var(--border);
+  border-radius:.5rem;
+  width:100%;
+}
+
+/* Inner table cell borders used if the HTML <table> was overriden */
+body.about table th,
+body.about table td{
+  border:1px solid var(--border);
+  padding:.6rem .75rem;
+  text-align:left;
+  font-size: .95rem;
+}
+
+/* Main job sections */
+body.about header .header-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 1rem 1rem;
+}
+
+/* Alignment of header text to the center of the page */
+body.about header dl{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body.about header dl dd {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+}
+
+/* Job headings and metadata */
+body.about section h2{
+  margin-top:0;
+  color:var(--navy);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+}
+
+body.about meta{
+  color: var(--muted);
+  font-size:.95rem;
+  margin:.25rem 0 .75rem;
+}
+
+/* Responsive: stack aside below content on small screens */
+@media (max-width: 719px){
+  body.about aside{
+    float:none;
+    width:auto;
+    margin:0 0 1rem 0;
+  }
+}
