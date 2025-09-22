@@ -27,17 +27,44 @@
         <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
         <h2 id="contact-form-heading">Send Us a Message</h2>
     <div>
-        <label for="name">Your Name:</label><br />
+        <label for="name">Your Name:</label><br/>
         <input type="text" id="name" name="name" required />
     </div>
 
     <div>
-        <label for="email">Your Email:</label><br />
+        <label for="email">Your Email:</label><br/>
         <input type="email" id="email" name="email" required />
     </div>
 
+    <div> 
+    <label for="enquiry">Select an enquiry type:</label><br/>
+    <select id="enquiry" name="enquiry" required>
+        <option value="">-- Please choose an option --</option>
+        <option value="job-application">Job Application</option>
+        <option value="position">Position</option>
+        <option value="working-hours">Working Hours</option>
+        <option value="salary">Salary</option>
+        <option value="benefits">Benefits</option>
+        <option value="leave">Leave/Time Off</option>
+        <option value="other">Other</option>
+    </select>
+    </div>
+
+   <div>
+        <label>Select your study level:</label><br/>
+        <input type="radio" id="undergrad" name="study-level" value="undergraduate" required>
+        <label for="undergrad">Undergraduate</label><br/>
+
+        <input type="radio" id="graduate" name="study-level" value="graduate">
+        <label for="graduate">Graduate</label><br/>
+
+        <input type="radio" id="phd" name="study-level" value="phd">
+        <label for="phd">PhD</label>
+    </div>
+
+
     <div>
-        <label for="message">Message:</label><br />
+        <label for="message">Message:</label><br/>
         <textarea id="message" name="message" rows="5" required></textarea>
     </div>
 
