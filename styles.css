@@ -364,7 +364,6 @@ body.about meta{
   border: 2px solid var(--navy);
   padding: 0.5rem 0.9rem;
   border-radius: 0.45rem;
-  display: inline-block;
   margin-top: 1rem;
   float :right;
 }
