@@ -278,7 +278,7 @@ body.apply textarea:focus{ outline:3px solid var(--focus); outline-offset:1px; }
 /* Invalid quick visual (browser validation) */
 body.apply input:invalid,
 body.apply select:invalid,
-body.apply textarea:invalid{ border-color:#dc2626; }
+body.apply textarea:invalid{ border-color:#082a63; }
 
 
 
