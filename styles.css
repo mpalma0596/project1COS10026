@@ -436,7 +436,7 @@ body.contact input[type="checkbox"]{
 /* Remove any top gap before the message field */
 body.contact label[for="message"],
 body.contact #message-label {
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 /* Ensure textarea has no top margin */
@@ -444,6 +444,17 @@ body.contact textarea{
   margin-top: 0;
 }
 
+/* Customizing send button to match apply.html */
+body.contact .actions{ display:flex; gap:.75rem; flex-wrap:wrap; }
+body.contact [type="submit"],
+body.contact [type="reset"],
+body.contact button{
+  border:0; border-radius:.4rem; padding:.6rem .95rem; cursor:pointer;
+}
+body.contact [type="submit"]{ background:var(--navy); color:#fff; border:2px solid var(--navy); }
+body.contact [type="submit"]:hover{ background:var(--navy-deep); border-color:var(--navy-deep); color:#fff; }
+body.contact [type="reset"]{ background:#e5e7eb; }
+body.contact [type="reset"]:hover{ background:#d1d5db; }
 
 
 
