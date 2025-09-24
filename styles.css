@@ -367,6 +367,16 @@ body.about meta{
   margin-top: 1rem;
   float: right;
 }
+#backto {
+  text-decoration: none;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.45rem;
+  margin-top: 1rem;
+  float: left;
+}
+
 
 
 
