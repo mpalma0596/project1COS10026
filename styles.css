@@ -376,28 +376,6 @@ body.about meta{
   margin-top: 1rem;
   float: left;
 }
-#quote {
-  font-style: italic;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  max-width: 75ch;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-#main-image {
-  margin-top: 1rem;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, .05);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-#quote-headings {
-  text-align: center;
-}
 
 
 
