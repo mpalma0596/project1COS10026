@@ -58,7 +58,7 @@ header{
 /* Optional stronger background image for index:
    put a file named background.jpg next to index.html or adjust the path. */
 header{
-  background-image: url("background.jpg"), linear-gradient(0deg, rgba(11,61,145,.05), rgba(11,61,145,.05));
+  background-image: url("background.png"), linear-gradient(0deg, rgba(11,61,145,.05), rgba(11,61,145,.05));
   background-size: cover, auto;
   background-position: center;
 }
@@ -76,8 +76,8 @@ header h1{
   color:var(--navy);
   letter-spacing:.5px;
 }
-header p{margin:.4rem auto; max-width:70ch}
-header em{color:var(--muted)}
+header p{margin:.4rem auto; max-width:70ch; color:var(--card)}
+header em{color:var(--border)}
 
 /* ===== NAV ===== */
 nav{padding:0 1rem 1.25rem}
