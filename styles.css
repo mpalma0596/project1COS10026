@@ -73,7 +73,7 @@ header h1{
   margin:.25rem 0 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.6rem);
-  color:var(--navy);
+  color:var(--card);
   letter-spacing:.5px;
 }
 header p{margin:.4rem auto; max-width:70ch; color:var(--card)}
@@ -164,7 +164,7 @@ body.jobs section{
 /* Job headings and metadata */
 body.jobs section h2{
   margin-top:0;
-  color:var(--navy);
+  color:var(--card);
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
 }
 body.jobs .meta{
@@ -182,7 +182,7 @@ body.jobs section li{
   margin:.25rem 0;
 }
 
-/* “Apply” callout links/buttons inside job sections (optional) */
+/* “Apply” callout links/buttons inside job sections */
 body.jobs .apply-link{
   display:inline-block;
   margin-top:.75rem;
@@ -376,7 +376,6 @@ body.about meta{
   margin-top: 1rem;
   float: left;
 }
-
 
 
 
