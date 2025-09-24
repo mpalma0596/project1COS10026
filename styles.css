@@ -367,3 +367,127 @@ body.about meta{
   margin-top: 1rem;
   float: right;
 }
+
+
+
+/* ===== contact.html - team member cards (flexbox) ===== */
+/* Ensure contact info lines (email & phone & address) are bold */
+body.contact .contact-info-heading p{
+  font-weight: 700;
+}
+
+/* Ensure contact details for email & phone are normal weight */
+body.contact .contact-info-heading a{
+  font-weight: 400;
+}
+
+/* Ensure contact details for address are normal weight */
+body.contact .contact-info-heading p#address { font-weight: 700; }
+body.contact .contact-info-heading p#address .addr-value { font-weight: 400; }
+
+
+/* make contact form label + control spacing match apply.html */
+body.contact label{
+  display:block;
+  font-weight:600;
+  margin-bottom:.25rem; /* small gap between label and control */
+}
+
+/* controls: same sizing and spacing used on apply page */
+body.contact input[type="text"],
+body.contact input[type="email"],
+body.contact select,
+body.contact textarea{
+  width:100%;              /* match apply layout so input sits close under label */
+  padding:.55rem .6rem;
+  border:1px solid var(--border);
+  border-radius:.35rem;
+  background:#fff;
+  margin-top:0;            /* remove any extra top gap */
+  margin-bottom:1rem;     /* comfortable gap after the control */
+}
+
+/* Fieldsets */
+body.apply fieldset{
+  border:1px solid var(--border);
+  border-radius:.35rem;
+  padding: .8rem;
+}
+body.apply legend{ font-weight:700; }
+
+
+
+
+
+
+
+
+
+/* ===== apply.html — form layout & styling (Grid/Flex, accessible focus) ===== */
+
+/* Page padding fix for apply.html so doesnt stick to border sides */
+body.apply{
+  padding-inline: clamp(24px, 5vw, 60px);
+}
+
+body.apply main{ padding-top: 1rem; }
+
+/* Grid layout for the form */
+body.apply .form-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1rem;
+}
+
+/* Make some rows span full width on larger screens */
+@media (min-width: 720px){
+  body.apply .form-grid{ grid-template-columns: 1fr 1fr; }
+  body.apply .form-grid .full{ grid-column: 1 / -1; }
+}
+
+/* Labels & controls */
+body.apply label{ display:block; font-weight:600; margin-bottom:.25rem; }
+body.apply input[type="text"],
+body.apply input[type="email"],
+body.apply input[type="tel"],
+body.apply select,
+body.apply textarea{
+  width:100%;
+  padding:.55rem .6rem;
+  border:1px solid var(--border);
+  border-radius:.35rem;
+  background:#fff;
+}
+
+/* Fieldsets */
+body.apply fieldset{
+  border:1px solid var(--border);
+  border-radius:.35rem;
+  padding: .8rem;
+}
+body.apply legend{ font-weight:700; }
+
+/* Hints under inputs */
+body.apply .hint{ font-size:.9rem; color:var(--muted); margin-top:.25rem; }
+
+/* Buttons */
+body.apply .actions{ display:flex; gap:.75rem; flex-wrap:wrap; }
+body.apply [type="submit"],
+body.apply [type="reset"],
+body.apply button{
+  border:0; border-radius:.4rem; padding:.6rem .95rem; cursor:pointer;
+}
+body.apply [type="submit"]{ background:var(--navy); color:#fff; border:2px solid var(--navy); }
+body.apply [type="submit"]:hover{ background:var(--navy-deep); border-color:var(--navy-deep); color:#fff; }
+body.apply [type="reset"]{ background:#e5e7eb; }
+body.apply [type="reset"]:hover{ background:#d1d5db; }
+
+/* Focus states (use global outline colour) */
+body.apply input:focus,
+body.apply select:focus,
+body.apply textarea:focus{ outline:3px solid var(--focus); outline-offset:1px; }
+
+/* Invalid quick visual (browser validation) */
+body.apply input:invalid,
+body.apply select:invalid,
+body.apply textarea:invalid{ border-color:#082a63; }
