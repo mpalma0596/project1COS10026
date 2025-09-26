@@ -291,6 +291,17 @@ body.about .layout{
   padding-top: .5rem;
 }
 
+/* about.html — embedded image with black border */
+body.about .card figure img{
+  display:block;
+  width:100%;           
+  height:auto;
+  margin:0 auto 0.75rem; 
+  background:#fff;       
+  border:6px solid #000; /* solid black outer border */
+}
+
+
 /* Right column info panel */
 body.about aside{
   width:25%;
