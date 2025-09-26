@@ -415,14 +415,14 @@ body.contact input[type="text"],
 body.contact input[type="email"],
 body.contact select,
 body.contact textarea{
-  width:100%;              /* match apply layout so input sits close under label */
+  width:100%;              /* match apply layout*/
   padding:.55rem .6rem;
   border:1px solid var(--border);
   border-radius:.35rem;
   background:#fff;
   margin-top:0;            /* remove any extra top gap */
-  margin: 0 0 1rem 0;      /* only bottom margin, no top margin */
-  margin-bottom:1rem;     /* comfortable gap after the control */
+  margin: 0 0 1rem 0;      
+  margin-bottom:1rem;     
 }
 
 /* Make radio/checkbox controls and their labels sit inline and remove extra gaps */
